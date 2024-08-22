@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --Marineblue: hsl(213, 96%, 18%);
+    --Purplishblue: hsl(243, 100%, 62%);
+    --Pastelblue: hsl(228, 100%, 84%);
+    --Lightblue: hsl(206, 94%, 87%);
+    --Strawberryred: hsl(354, 84%, 57%);
+
+    --Coolgray: hsl(231, 11%, 63%);
+    --Lightgray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font: "Ubuntu";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Magnolia);
+}
+
+p{
+    font-size: 16px;
+}
+
+.contenedor{
+    position: relative;
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+aside{
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    height: 550px;
+    width: 270px;
+}
+
+aside .contenido__aside{
+    display: flex;
+    align-items: center;
+}
+
+aside .contenido__aside .step{
+    display: flex;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 30px 20px 25px 50px;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+aside .contenido__aside .step:hover{
+    background-color: var(--Pastelblue);
+}
+aside .contenido__aside .step:active{
+    background-color: var(--Marineblue);
+}
+
+
+aside .contenido__aside .step p{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+aside .contenido__aside .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside .contenido__aside .info p:nth-child(2){
+    align-items: right;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+aside .contenido__aside .info p:nth-child(1){
+    align-items: right;
+    color: var(--Coolgray);
+    font-weight: 300;
+}
+
+/*Estilos repetidos*/
+article{
+    padding: 2.5rem;
+}
+
+.titulo{
+    color: var(--Marineblue);
+    font-size: 30px;
+}
+
+.descripcion{
+    color: var(--Coolgray);
+    margin-top:5px;
+}
+
+/*FIN Estilos repetidos*/
+
+/*CONTENEDOR DE INFORMACION PERSONAL*/
+.contenedor__info {
+    display: none;
+}
+
+.contenedor__info form{
+    margin-top: 35px;
+}
+
+.contenedor__info form label{
+    color: var(--Marineblue);
+    font-weight: 500;
+}
+
+.contenedor__info form input{
+    color: var(--Marineblue);
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--Lightgray);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.contenedor__info form .info--input{
+    margin-bottom: 40px;
+}
+
+.contenedor__info form .info--input input{
+    color: var(--Marineblue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contenedor__info form .info--input:last-child {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.contenedor__info form .info--input button{
+    padding: 15px;
+    color: var(--White);
+    background-color: var(--Marineblue);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px; 
+    margin-right: -15px;
+}
+
+.contenedor__info form .info--input button:hover{
+    background-color: var(--Purplishblue);
+}
+
+
+/*FIN CONTENEDOR DE INFORMACION PERSONAL*/
+
+/*CONTENEDOR DE PLANES*/
+.contenedor__plan{
+    display: none;
+}
+
+.contenedor__plan .plan--grid{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+
+.contenedor__plan .plan--grid .plan--info{
+    border: 1px solid var(--Coolgray);
+    border-radius: 15px;
+    height: 110px;
+    width: 90px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+    transition: all .2s;
+}
+
+.contenedor__plan .plan--grid .plan--info:hover{
+    background-color: var(--Magnolia);
+    border: 1px solid var(--Coolgray);
+}
+
+.contenedor__plan .plan--grid .plan--info .info--p p:first-child{
+    color: var(--Marineblue);
+    font-weight: 700;
+}
+
+.contenedor__plan .plan--grid .plan--info .info--p p:last-child{
+    color: var(--Coolgray);
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+
+.contenedor__plan .contenedor--toggle{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--Alabaster);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contenedor__plan .contenedor--toggle .toggle-label {
+    color: var(--Coolgray);
+}
+
+.contenedor__plan .contenedor--toggle .toggle-switch {
+    display: none;
+}
+
+.contenedor__plan .contenedor--toggle .switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: var(--Lightgray);
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.contenedor__plan .contenedor--toggle .switch::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--White);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.contenedor__plan .contenedor--toggle .toggle-switch:checked + .switch {
+    background-color: var(--Marineblue);
+}
+
+.contenedor__plan .contenedor--toggle .toggle-switch:checked + .switch::before {
+    transform: translateX(26px);
+}
+
+.contenedor__plan .contenedor--toggle .toggle-switch:checked + .switch + .toggle-label {
+    color: var(--Marineblue);
+}
+
+.contenedor__plan .contenedor--toggle .toggle-switch:not(:checked) + .switch + .toggle-label {
+    color: var(--Coolgray);
+}
+
+
+
+.contenedor__plan .boton--atras{
+    position: absolute;
+    bottom: 40px;
+}
+.contenedor__plan .boton{
+    position: absolute;
+    bottom: 40px;
+    right: 55px;
+}
+
+.boton--atras button{
+    padding: 15px;
+    color: var(--Coolgray);
+    background-color: var(--White);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700; 
+}
+.boton--atras button:hover{
+    color: var(--Marineblue);
+}
+
+.boton button{
+    padding: 15px;
+    color: var(--White);
+    background-color: var(--Marineblue);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.boton button:hover{
+    background-color: var(--Purplishblue);
+}
