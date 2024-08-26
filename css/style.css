@@ -121,11 +121,48 @@ article{
     margin-top:5px;
 }
 
+.boton--atras{
+    position: absolute;
+    bottom: 40px;
+}
+ .boton{
+    position: absolute;
+    bottom: 40px;
+    right: 55px;
+}
+
+.boton--atras button{
+    padding: 15px;
+    color: var(--Coolgray);
+    background-color: var(--White);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700; 
+}
+.boton--atras button:hover{
+    color: var(--Marineblue);
+}
+
+.boton button{
+    padding: 15px;
+    color: var(--White);
+    background-color: var(--Marineblue);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.boton button:hover{
+    background-color: var(--Purplishblue);
+}
+
 /*FIN Estilos repetidos*/
 
 /*CONTENEDOR DE INFORMACION PERSONAL*/
 .contenedor__info {
-    display: none;
+    display: block;
 }
 
 .contenedor__info form{
@@ -285,31 +322,230 @@ article{
 }
 
 
+/*FIN CONTENEDOR DE PLANES*/
 
-.contenedor__plan .boton--atras{
-    position: absolute;
-    bottom: 40px;
-}
-.contenedor__plan .boton{
-    position: absolute;
-    bottom: 40px;
-    right: 55px;
+
+/*CONTENEDOR ADD*/
+.contenedor__ads{
+    display: none;
 }
 
-.boton--atras button{
+.contenedor__ads .ads--info{
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid var(--Coolgray);
     padding: 15px;
-    color: var(--Coolgray);
-    background-color: var(--White);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700; 
-}
-.boton--atras button:hover{
-    color: var(--Marineblue);
+    border-radius: 15px;
 }
 
-.boton button{
+.contenedor__ads .ads--info input[type="checkbox"] {
+    appearance: none; /* Oculta el checkbox por defecto */
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Coolgray);
+    border-radius: 5px; /* Redondea las esquinas */
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo cuando el checkbox está seleccionado */
+.contenedor__ads .ads--info input[type="checkbox"]:checked {
+    background-color: var(--Purplishblue); /* Cambia el fondo cuando está seleccionado */
+    border-color: var(--Purplishblue); /* Cambia el color del borde cuando está seleccionado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para la marca dentro del checkbox */
+.contenedor__ads .ads--info input[type="checkbox"]:checked::before {
+    content: '✓'; /* Agrega la marca de verificación */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Añade un efecto hover */
+.contenedor__ads .ads--info input[type="checkbox"]:hover {
+    border-color: var(--Purplishblue); /* Cambia el color del borde al pasar el mouse */
+}
+
+
+
+.contenedor__ads .ads--info .ads--precio{
+    margin-left: auto;
+}
+
+.contenedor__ads .ads--info .ads--precio p{
+    margin: 0;
+}
+
+.contenedor__ads .ads--info:hover{
+    border: 2px solid var(--Marineblue);
+    background-color: var(--Alabaster);
+}
+
+.contenedor__ads .ads--info:active{
+    border: 1px solid var(--Marineblue);
+    background-color: var(--Alabaster);
+}
+
+/*FIN CONTENEDOR ADD*/
+
+
+/*CONTENEDOR DE SERVICIOS*/
+
+.contenedor__servicios{
+    display: none;
+}
+
+.contenedor__servicios .servicios{
+    margin-top: 50px;
+    padding: 15px;
+    background-color: var(--Alabaster);
+    border-radius: 10px;
+    width: 100%;
+    border-bottom: 1px solid var(--Coolgray);
+}
+
+.contenedor__servicios .servicios .servicios--añadido{
+    display: flex;
+    width: 100%;
+}
+
+.contenedor__servicios .servicios .servicios--añadido:first-child{
+    margin-top: 0;
+}
+
+.contenedor__servicios .servicios .servicios--añadido{
+    margin-top: 20px;
+}
+
+.contenedor__servicios .servicios .servicios--añadido p{
+    color: var(--Marineblue);
+    font-weight: 500;
+}
+
+.contenedor__servicios .servicios .servicios--añadido a{
+    color: var(--Coolgray);
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contenedor__servicios .servicios .servicios--añadido .servicio--precio{
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor__servicios .servicios .servicios--añadido .servicio--precio p{
+    margin: 0;
+    color: var(--Marineblue);
+    font-weight: 700;
+}
+/*FIN CONTENEDOR DE SERVICIOS*/
+
+/*CONTENEDOR GRACIAS*/
+
+.contenedor__gracias{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedor__gracias p{
+    max-width: 450px;
+}
+
+
+
+/*Medais Queris*/
+
+@media (max-width: 764px) {
+    body{
+        display: block;
+    }
+
+    .contenedor{
+        flex-direction: column;
+    }
+
+    aside{
+        background-image: url(../assets/images/bg-sidebar-mobile.svg);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    aside .contenido__aside .step{
+        margin: 0 10px 25px 10px;
+    }
+
+    aside .contenido__aside .info{
+        display: none;
+    }
+
+    .contenedor__info {
+        display: block;
+        width: 90%;
+    }
+}
+
+/*
+.contenedor__info {
+    display: block;
+}
+
+.contenedor__info form{
+    margin-top: 35px;
+}
+
+.contenedor__info form label{
+    color: var(--Marineblue);
+    font-weight: 500;
+}
+
+.contenedor__info form input{
+    color: var(--Marineblue);
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--Lightgray);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.contenedor__info form .info--input{
+    margin-bottom: 40px;
+}
+
+.contenedor__info form .info--input input{
+    color: var(--Marineblue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contenedor__info form .info--input:last-child {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.contenedor__info form .info--input button{
     padding: 15px;
     color: var(--White);
     background-color: var(--Marineblue);
@@ -317,8 +553,10 @@ article{
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
+    margin-top: 20px; 
+    margin-right: -15px;
 }
 
-.boton button:hover{
+.contenedor__info form .info--input button:hover{
     background-color: var(--Purplishblue);
 }
