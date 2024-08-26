@@ -163,7 +163,7 @@ article{
 
 /*CONTENEDOR DE INFORMACION PERSONAL*/
 .contenedor__info {
-    display: block;
+    display: none;
 }
 
 .contenedor__info form{
@@ -433,7 +433,7 @@ article{
 /*CONTENEDOR GRACIAS*/
 
 .contenedor__gracias{
-    display: none;
+    display: block;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -457,6 +457,8 @@ article{
         flex-direction: column;
         width: 100vw;
         height: 100vh;
+        background-color: var(--Magnolia);
+        padding: 0;
     }
 
     aside{
@@ -465,7 +467,7 @@ article{
         width: 100%;
         display: flex;
         justify-content: center;
-
+        border-radius: 0;
     }
 
     aside .contenido__aside .step{
@@ -476,30 +478,76 @@ article{
         display: none;
     }
 
-    .contenedor__info {
-        display: block;
-        width: 90%;
+    aside .contenido__aside .step p{
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .contenedor__info,.contenedor__plan, .contenedor__ads, .contenedor__servicios, .contenedor__gracias{
+        padding: 16px 18px;
+        border-radius: 10px;
+        margin: 0 6.5% auto;
+        width: 80%;
+        background-color: var(--White);
+        position: absolute;
+        top: 110px;
+        height: 450px;
     }
     .contenedor__info form input{
         color: var(--Marineblue);
         width: 90%;
     }
+
+    .boton{
+        top: 88%;
+        right: 8%;
+    }
+
+    .boton--atras{
+        top: 88%;
+        left: 8%;
+    }
+
+    .contenedor__plan .plan--grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .contenedor__plan .plan--grid .plan--info{
+        height: auto;
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .contenedor__plan .contenedor--toggle{
+        margin-top: 20px;
+        
+    }
+
+    .contenedor__servicios .servicios{
+        margin: 30px auto 0 auto;
+        width: 90%;
+    }
+
+    .contenedor__gracias{
+        display: flex;
+        text-align: center;
+    }
 }
 
 /*
-
-.contenedor__info form .info--input button{
-    padding: 15px;
-    color: var(--White);
-    background-color: var(--Marineblue);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-top: 20px; 
-    margin-right: -15px;
+.contenedor__gracias{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.contenedor__info form .info--input button:hover{
-    background-color: var(--Purplishblue);
+.contenedor__gracias p{
+    max-width: 450px;
 }
+
