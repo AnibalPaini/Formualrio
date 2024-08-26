@@ -193,31 +193,6 @@ article{
     font-weight: 700;
 }
 
-.contenedor__info form .info--input:last-child {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-
-.contenedor__info form .info--input button{
-    padding: 15px;
-    color: var(--White);
-    background-color: var(--Marineblue);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    margin-top: 20px; 
-    margin-right: -15px;
-}
-
-.contenedor__info form .info--input button:hover{
-    background-color: var(--Purplishblue);
-}
-
-
 /*FIN CONTENEDOR DE INFORMACION PERSONAL*/
 
 /*CONTENEDOR DE PLANES*/
@@ -479,6 +454,8 @@ article{
 
     .contenedor{
         flex-direction: column;
+        width: 100vw;
+        height: 100vh;
     }
 
     aside{
@@ -502,48 +479,13 @@ article{
         display: block;
         width: 90%;
     }
+    .contenedor__info form input{
+        color: var(--Marineblue);
+        width: 90%;
+    }
 }
 
 /*
-.contenedor__info {
-    display: block;
-}
-
-.contenedor__info form{
-    margin-top: 35px;
-}
-
-.contenedor__info form label{
-    color: var(--Marineblue);
-    font-weight: 500;
-}
-
-.contenedor__info form input{
-    color: var(--Marineblue);
-    width: 100%;
-    padding: 10px;
-    border: 2px solid var(--Lightgray);
-    border-radius: 10px;
-    margin-top: 5px;
-}
-
-.contenedor__info form .info--input{
-    margin-bottom: 40px;
-}
-
-.contenedor__info form .info--input input{
-    color: var(--Marineblue);
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.contenedor__info form .info--input:last-child {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
 
 .contenedor__info form .info--input button{
     padding: 15px;
