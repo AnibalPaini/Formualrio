@@ -159,15 +159,24 @@ article{
     background-color: var(--Purplishblue);
 }
 
+
+
 /*FIN Estilos repetidos*/
 
 /*CONTENEDOR DE INFORMACION PERSONAL*/
 .contenedor__info {
-    display: none;
+    display: block;
 }
 
 .contenedor__info form{
     margin-top: 35px;
+}
+
+.contenedor__info form p{
+    font-size: 0.8em;
+    color: red;
+    font-weight:700;
+    display: none
 }
 
 .contenedor__info form label{
@@ -223,6 +232,11 @@ article{
 }
 
 .contenedor__plan .plan--grid .plan--info:hover{
+    background-color: var(--Magnolia);
+    border: 1px solid var(--Coolgray);
+}
+
+.contenedor__plan .plan--grid .plan--info.selected{
     background-color: var(--Magnolia);
     border: 1px solid var(--Coolgray);
 }
@@ -433,7 +447,7 @@ article{
 /*CONTENEDOR GRACIAS*/
 
 .contenedor__gracias{
-    display: block;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
