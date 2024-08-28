@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorStep = document.querySelectorAll(".step")
 
     //VALIDAR FORMULARIO
-    let valid = true;
     function validarForm() {
-        
+        console.log("Verificacion FORM")
+        let valid = true;
         // Validar el campo de nombre
         if (nameInput.value.trim() === '') {
             nameError.style.display = 'block';
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             nameError.style.display = 'none';
             nameInput.style.border = '1px solid green';
+            
         }
 
         // Validar el campo de correo electrónico
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             mailError.style.display = 'none';
             emailInput.style.border = '1px solid green';
+            
         }
 
         // Validar el campo de número de teléfono
@@ -49,26 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             numError.style.display = 'none';
             phoneInput.style.border = '1px solid green';
+            
         }
 
         return valid;
     }
     
-
-    function cambiarColorStep(stepIndex) {
-        colorStep.forEach((colSteps, indice)=>{
-            colSteps.style.backgroundColor = (indice === stepIndex) ? 'var(--Pastelblue)' : 'transparent';
-        });
-    };
-
-
     //CAMBIAR DE STEP (ARTICULO) Y COLOR DEL STEP
     function mostrarStep(stepIndex) {
         steps.forEach((step, index) => {//CAMBIAR DE STEP (ARTICULO)
             step.style.display = (index === stepIndex) ? 'block' : 'none';
+            console.log("next")
         });
         colorStep.forEach((colSteps, indice)=>{//CAMBIAR STEP COLOR
             colSteps.style.backgroundColor = (indice === stepIndex) ? 'var(--Pastelblue)' : 'transparent';
+            console.log("Pintar")
         });
     };
 
@@ -78,7 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (actualStep < steps.length - 1 && validarForm()) {
                 actualStep++;
                 mostrarStep(actualStep);
+                console.log("Boton next")
             }
+
         });
     });
 
@@ -89,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 actualStep--;
                 mostrarStep(actualStep);
             }
+            console.log("Boton back")
         });
     });
 
