@@ -1,0 +1,16 @@
+FUNCIONALIDADES FALTANTES JS:
+
+SELECT PLAN => Hacer que se seleccione un plan predeterminado.
+
+SWITCH TOGGLE => Hacer que los precios cambien segun el plan elegido.
+
+
+
+
+FUNCIONALIDADES LISTAS:
+
+BOTON "NEXT STEP" y "BACK STEP" => Hacer que por cada boton se pase de article. LISTO
+
+PINTAR EL CIRCULO STEP => Cuando cambiamos de STEP se debe pintar el circulo.
+
+FORMULARIOS => Hacer que no se pueda avanzar de STEP hasta que los campos necesarios de esos formularios sean completados. LISTO

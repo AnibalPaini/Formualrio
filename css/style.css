@@ -12,6 +12,7 @@
     --Magnolia: hsl(217, 100%, 97%);
     --Alabaster: hsl(231, 100%, 99%);
     --White: hsl(0, 0%, 100%);
+    --blue: hsl(256, 100%, 50%);
 
     --Font: "Ubuntu";
 }
@@ -63,7 +64,7 @@ aside .contenido__aside{
 
 aside .contenido__aside .step{
     display: flex;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     padding: 5px;
     border-radius: 50%;
     margin: 30px 20px 25px 50px;
@@ -71,15 +72,7 @@ aside .contenido__aside .step{
     justify-content: center;
     width: 20px;
     height: 20px;
-    cursor: pointer;
     transition: background-color .2s;
-}
-
-aside .contenido__aside .step:hover{
-    background-color: var(--Pastelblue);
-}
-aside .contenido__aside .step:active{
-    background-color: var(--Marineblue);
 }
 
 
@@ -448,17 +441,26 @@ article{
 
 .contenedor__gracias{
     display: none;
+}
+
+.contenedor__gracias .flex{
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor__gracias{
+    display: none;
 }
 
 .contenedor__gracias p{
     max-width: 450px;
 }
-
-
 
 /*Medais Queris*/
 

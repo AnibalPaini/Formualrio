@@ -56,33 +56,33 @@
 
   <!-- Sidebar end -->
   <!-- Step 1 start -->
-  <article class="contenedor__info stp step-1">
+  <article class="contenedor__info stp">
     <h2 class="titulo">Personal info</h2>
     <p class="descripcion">Please provide your name, email address, and phone number.</p>
     <form action="" id="personal-info-form" novalidate>
       <div class="info--input">
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="e.g. Stephen King" required>
-        <p id="error-name" >Completa este campo</p>
+        <p id="name-error" >Completa este campo</p>
       </div>
       <div class="info--input">
         <label for="email">Email Address</label>
         <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-        <p id="error-email" >Completa este campo o verifica el correo ingresado</p>
+        <p id="mail-error" >Completa este campo o verifica el correo ingresado</p>
       </div>
       <div class="info--input">
         <label for="phone">Phone Number</label>
         <input type="text" id="phone" placeholder="e.g. +1 234 567 890" required>
-        <p id="error-phone" >Completa este campo</p>
+        <p id="num-error" >Completa este campo</p>
       </div>
       <div class="boton">
-        <button type="submit">Next Step</button>
+        <button type="button">Next Step</button>
       </div>
     </form>
   </article>
 
 
-  <article class="contenedor__plan stp step-2">
+  <article class="contenedor__plan stp">
     <h2 class="titulo">Select your plan</h2>
     <p class="descripcion">You have the option of monthly or yearly billing.</p>
 
@@ -136,7 +136,7 @@
 
   <!-- Step 3 start -->
 
-  <article class="contenedor__ads stp step-3">
+  <article class="contenedor__ads stp">
     <h2 class="titulo">Pick add-ons</h2>
 
     <p class="descripcion">Add-ons help enhance your gaming experience.</p>
@@ -189,7 +189,7 @@
   <!--Step 3 end -->
 
   <!-- Step 4 start -->
-  <article class="contenedor__servicios stp step-4">
+  <article class="contenedor__servicios stp">
     <h2 class="titulo">Finishing up</h2>
     <p class="descripcion">Double-check everything looks OK before confirming.</p>
 
@@ -233,16 +233,18 @@
   <!-- Step 4 end--> 
 
   <!-- Step 5 start -->
-  <article class="contenedor__gracias stp step-5">
-    <img src="./assets/images/icon-thank-you.svg" alt="">
-    <h2 class="titulo">Thank you!</h2>
-    <p class="descripcion">Thanks for confirming your subscription! We hope you have fun 
-      using our platform. If you ever need support, please feel free 
-      to email us at support@loremgaming.com.</p>
+  <article class="contenedor__gracias stp">
+    <div class="flex">
+      <img src="./assets/images/icon-thank-you.svg" alt="">
+      <h2 class="titulo">Thank you!</h2>
+      <p class="descripcion">Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.</p>
+    </div>
   </article>
   <!--Step 5 end -->
 </main>
 
-<script src="./js/script.js"></script>
+<script src="./js/prueba.js"></script>
 </body>
 </html>
