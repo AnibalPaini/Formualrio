@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function validarForm() {
         console.log("Verificacion FORM")
         let valid = true;
-        // Validar el campo de nombre
+        // Validar el campo de nombr
         if (nameInput.value.trim() === '') {
             nameError.style.display = 'block';
             nameInput.style.border = '1px solid red';
